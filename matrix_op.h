@@ -2,7 +2,7 @@
 #define MATRIX_OP_H
 #define SIZE 3
 //function declare
-
+//ts
 /* Basic operations */
 void matrix_add(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]);
 void matrix_sub(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]);
