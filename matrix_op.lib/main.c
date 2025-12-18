@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "matrix_op.h"
 
+int i,j;
 void print(const char *title, double M[SIZE][SIZE]) {
     printf("=== %s ===\n", title);
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++)
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++)
             printf("%8.2f ", M[i][j]);
         printf("\n");
     }
