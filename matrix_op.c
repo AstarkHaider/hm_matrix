@@ -1,4 +1,4 @@
-#include <stdio.h>
+
 #include "matrix_op.h"
 
 /* Addition */
