@@ -1,39 +1,40 @@
 
 #include "matrix_op.h"
 
+int i,j;
 /* Basic */
 void mat_add(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]) {
-    for (int i = 0; i < SIZE; i++)
-        for (int j = 0; j < SIZE; j++)
+    for (i = 0; i < SIZE; i++)
+        for (j = 0; j < SIZE; j++)
             R[i][j] = A[i][j] + B[i][j];
 }
 
 void mat_sub(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]) {
-    for (int i = 0; i < SIZE; i++)
-        for (int j = 0; j < SIZE; j++)
+    for (i = 0; i < SIZE; i++)
+        for (j = 0; j < SIZE; j++)
             R[i][j] = A[i][j] - B[i][j];
 }
 
 void mat_elem_mul(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]) {
-    for (int i = 0; i < SIZE; i++)
-        for (int j = 0; j < SIZE; j++)
+    for (i = 0; i < SIZE; i++)
+        for (j = 0; j < SIZE; j++)
             R[i][j] = A[i][j] * B[i][j];
 }
 
 /* Linear */
 void mat_mul(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]) {
-    for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
             R[i][j] = 0;
-            for (int k = 0; k < SIZE; k++)
+            for (k = 0; k < SIZE; k++)
                 R[i][j] += A[i][k] * B[k][j];
         }
     }
 }
 
 void mat_transpose(double A[SIZE][SIZE], double R[SIZE][SIZE]) {
-    for (int i = 0; i < SIZE; i++)
-        for (int j = 0; j < SIZE; j++)
+    for (i = 0; i < SIZE; i++)
+        for (j = 0; j < SIZE; j++)
             R[j][i] = A[i][j];
 }
 
@@ -67,8 +68,8 @@ int mat_inverse(double A[SIZE][SIZE], double R[SIZE][SIZE]) {
     double adj[SIZE][SIZE];
     mat_adjoint(A, adj);
 
-    for (int i = 0; i < SIZE; i++)
-        for (int j = 0; j < SIZE; j++)
+    for (i = 0; i < SIZE; i++)
+        for (j = 0; j < SIZE; j++)
             R[i][j] = adj[i][j] / det;
 
     return 1;
