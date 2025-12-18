@@ -2,7 +2,7 @@
 #include "matrix_op.h"
 
 int i,j,k;
-/* Basic */
+
 void mat_add(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]) {
     for (i = 0; i < SIZE; i++)
         for (j = 0; j < SIZE; j++)
@@ -21,7 +21,7 @@ void mat_elem_mul(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZ
             R[i][j] = A[i][j] * B[i][j];
 }
 
-/* Linear */
+
 void mat_mul(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]) {
     for (i = 0; i < SIZE; i++) {
         for (j = 0; j < SIZE; j++) {
@@ -38,7 +38,7 @@ void mat_transpose(double A[SIZE][SIZE], double R[SIZE][SIZE]) {
             R[j][i] = A[i][j];
 }
 
-/* Advanced */
+
 double mat_det(double A[SIZE][SIZE]) {
     return
         A[0][0]*(A[1][1]*A[2][2] - A[1][2]*A[2][1]) -
