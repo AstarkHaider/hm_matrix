@@ -13,6 +13,7 @@ void print(const char *title, double M[SIZE][SIZE]) {
 }
 
 int main() {
+
     double A[SIZE][SIZE] = {
         {1, 2, 3},
         {0, 1, 4},
@@ -27,7 +28,9 @@ int main() {
 
     double R[SIZE][SIZE];
 
-    /* Basic Operations */
+    print("A", A);
+    print("B", B);
+
     mat_add(A, B, R);
     print("A + B", R);
 
@@ -37,14 +40,12 @@ int main() {
     mat_elem_mul(A, B, R);
     print("A ∘ B (Element-wise)", R);
 
-    /* Linear Operations */
     mat_mul(A, B, R);
     print("A * B (Matrix Multiplication)", R);
 
     mat_transpose(A, R);
     print("Transpose of A", R);
 
-    /* Advanced Operations */
     double det = mat_det(A);
     printf("=== Determinant of A ===\n");
     printf("det(A) = %.2f\n\n", det);
