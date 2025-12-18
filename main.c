@@ -16,17 +16,16 @@ int main() {
     double B[3][3] = {{7,8,9},{1,2,3},{4,5,6}};
     double R[3][3] = {0};
 
-    matrix_add(A, B, R);
+    mat_add(A, B, R);
     print(R);
 
-    matrix_mul(A, B, R);
+    mat_mul(A, B, R);
     print(R);
 
-    if (matrix_inverse(A, R))
+    if (mat_inverse(A, R))
         print(R);
     else
         printf("Matrix not invertible\n");
 
     return 0;
 }
-//t
