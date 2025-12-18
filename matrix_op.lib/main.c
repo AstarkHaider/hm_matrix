@@ -38,7 +38,7 @@ int main() {
     print("A - B", R);
 
     mat_elem_mul(A, B, R);
-    print("A ∘ B (Element-wise)", R);
+    print("A 。 B (Element-wise)", R);
 
     mat_mul(A, B, R);
     print("A * B (Matrix Multiplication)", R);
