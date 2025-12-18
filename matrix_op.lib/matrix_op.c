@@ -1,7 +1,7 @@
 
 #include "matrix_op.h"
 
-int i,j;
+int i,j,k;
 /* Basic */
 void mat_add(double A[SIZE][SIZE], double B[SIZE][SIZE], double R[SIZE][SIZE]) {
     for (i = 0; i < SIZE; i++)
