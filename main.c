@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include "matrix_op.h"
+
+void print(double M[SIZE][SIZE]) {
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++)
+            printf("%8.2f ", M[i][j]);
+        printf("\n");
+    }
+    printf("\n");
+}
+
+int main() {
+    double A[3][3] = {{1,2,3},{0,1,4},{5,6,0}};
+    double B[3][3] = {{7,8,9},{1,2,3},{4,5,6}};
+    double R[3][3];
+
+    matrix_add(A, B, R);
+    print(R);
+
+    matrix_mul(A, B, R);
+    print(R);
+
+    if (matrix_inverse(A, R))
+        print(R);
+    else
+        printf("Matrix not invertible\n");
+
+    return 0;
+}
